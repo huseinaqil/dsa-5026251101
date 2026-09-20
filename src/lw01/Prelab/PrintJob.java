@@ -3,6 +3,9 @@ public abstract class PrintJob implements Chargeable {
     int pages;
 
     public PrintJob(String id, int pages){
+        if(pages <= 0){
+            throw new IllegalArgumentException("Pages can not be zero or negative");
+        }
         this.id = id;
         this.pages = pages;
     }
