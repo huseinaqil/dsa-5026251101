@@ -3,6 +3,9 @@ public class Rental implements Chargeable {
     private int days;
 
     protected Rental(String id, int days) {
+        if (days <= 0) {
+            throw new IllegalArgumentException("Days can not be 0 or negative");
+        }
         this.id = id;
         this.days = days;
     }
@@ -21,7 +24,7 @@ public class Rental implements Chargeable {
 
     public int calculateCharge(int units) {
         if (units <= 0) {
-            throw new IllegalArgumentException("units can not be zero or negative");
+            throw new IllegalArgumentException("units can not be 0 or negative");
         }
         return units * calculateCharge();
     }
