@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        
+    
         Scanner input = new Scanner(Main.class.getResourceAsStream("Jobs.txt"));
         ArrayList<PrintJob> prints = new ArrayList<>();
         while (input.hasNext()){
@@ -28,4 +28,5 @@ public class Main {
         input.close();
     }
 }
+
 
