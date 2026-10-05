@@ -53,7 +53,7 @@ public class Main {
         }
        System.out.println("\n==== Final Enrollment ====");
        for(String key : courses.keySet()){
-            System.out.println(key + ": " + courses.get(key));
+            System.out.println(key + ": " + courses.get(key) + " Students");
         }
         System.out.println("\nRejected operations: " + failed);
     }
