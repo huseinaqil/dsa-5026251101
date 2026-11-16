@@ -18,10 +18,10 @@ public class Main {
         queue.add(start);
         visited.add(start);
         while (!queue.isEmpty()) {
-            int current = queue.poll();                  // take the building at the front of the queue
+            int current = queue.poll();                     // take the building at the front of the queue
             order.add(current);
             for (int next = 0; next < size; next++) {
-                if (!visited.contains(next)) {                          // next is a neighbour that has not been visited
+                if (graph[current][next] > 0 && !visited.contains(next)) {      // next is a neighbour that has not been visited
                     visited.add(next);
                     queue.add(next);                        // put next at the back of the queue
                 }
