@@ -57,10 +57,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(Main.class.getResourceAsStream("treenumbers.txt"));
 
-        // Line 1: values to insert
-        String[] values = input.nextLine().trim().split("\\s+");
-        // Line 2: target to search
-        int target = Integer.parseInt(input.nextLine().trim());
+        String[] values = input.nextLine().split(" ");
+    
+        int target = Integer.parseInt(input.nextLine());
 
         Node root = null;
         for (String v : values) {
